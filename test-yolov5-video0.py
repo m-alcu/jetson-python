@@ -20,8 +20,7 @@ while True:
     # Get annotated image
     annotated_frame = results.render()[0]
 
-    # Display the image
-    cv2.imshow('YOLOv5 Webcam', annotated_frame)
+    print(results.pandas())
 
     # Break loop with 'q'
     if cv2.waitKey(1) & 0xFF == ord('q'):
@@ -29,4 +28,3 @@ while True:
 
 # Release resources
 cap.release()
-cv2.destroyAllWindows()
